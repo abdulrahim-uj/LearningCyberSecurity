@@ -1,0 +1,48 @@
+┌──(anonymous㉿Unknown)-[~]
+└─$ sudo openvpn /home/anonymous/Works/TryHackMe/AbdulRahimK.ovpn 
+[sudo] password for anonymous: 
+2022-04-15 11:56:22 WARNING: Compression for receiving enabled. Compression has been used in the past to break encryption. Sent packets are not compressed unless "allow-compression yes" is also set.
+2022-04-15 11:56:22 DEPRECATED OPTION: --cipher set to 'AES-256-CBC' but missing in --data-ciphers (AES-256-GCM:AES-128-GCM). Future OpenVPN version will ignore --cipher for cipher negotiations. Add 'AES-256-CBC' to --data-ciphers or change --cipher 'AES-256-CBC' to --data-ciphers-fallback 'AES-256-CBC' to silence this warning.
+2022-04-15 11:56:22 OpenVPN 2.5.6 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar 20 2022
+2022-04-15 11:56:22 library versions: OpenSSL 1.1.1n  15 Mar 2022, LZO 2.10
+2022-04-15 11:56:22 Outgoing Control Channel Authentication: Using 512 bit message hash 'SHA512' for HMAC authentication
+2022-04-15 11:56:22 Incoming Control Channel Authentication: Using 512 bit message hash 'SHA512' for HMAC authentication
+2022-04-15 11:56:22 TCP/UDP: Preserving recently used remote address: [AF_INET]18.202.129.195:1194
+2022-04-15 11:56:22 Socket Buffers: R=[212992->212992] S=[212992->212992]
+2022-04-15 11:56:22 UDP link local: (not bound)
+2022-04-15 11:56:22 UDP link remote: [AF_INET]18.202.129.195:1194
+2022-04-15 11:56:22 TLS: Initial packet from [AF_INET]18.202.129.195:1194, sid=f00f5e14 6623383b
+2022-04-15 11:56:22 VERIFY OK: depth=1, CN=ChangeMe
+2022-04-15 11:56:22 VERIFY KU OK
+2022-04-15 11:56:22 Validating certificate extended key usage
+2022-04-15 11:56:22 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2022-04-15 11:56:22 VERIFY EKU OK
+2022-04-15 11:56:22 VERIFY OK: depth=0, CN=server
+2022-04-15 11:56:22 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bit RSA, signature: RSA-SHA256
+2022-04-15 11:56:22 [server] Peer Connection Initiated with [AF_INET]18.202.129.195:1194
+2022-04-15 11:56:24 SENT CONTROL [server]: 'PUSH_REQUEST' (status=1)
+2022-04-15 11:56:24 PUSH: Received control message: 'PUSH_REPLY,route 10.10.0.0 255.255.0.0,route-metric 1000,comp-lzo no,route-gateway 10.8.0.1,topology subnet,ping 5,ping-restart 120,ifconfig 10.8.73.220 255.255.0.0,peer-id 220'
+2022-04-15 11:56:24 OPTIONS IMPORT: timers and/or timeouts modified
+2022-04-15 11:56:24 OPTIONS IMPORT: compression parms modified
+2022-04-15 11:56:24 OPTIONS IMPORT: --ifconfig/up options modified
+2022-04-15 11:56:24 OPTIONS IMPORT: route options modified
+2022-04-15 11:56:24 OPTIONS IMPORT: route-related options modified
+2022-04-15 11:56:24 OPTIONS IMPORT: peer-id set
+2022-04-15 11:56:24 OPTIONS IMPORT: adjusting link_mtu to 1625
+2022-04-15 11:56:24 Using peer cipher 'AES-256-CBC'
+2022-04-15 11:56:24 Outgoing Data Channel: Cipher 'AES-256-CBC' initialized with 256 bit key
+2022-04-15 11:56:24 Outgoing Data Channel: Using 512 bit message hash 'SHA512' for HMAC authentication
+2022-04-15 11:56:24 Incoming Data Channel: Cipher 'AES-256-CBC' initialized with 256 bit key
+2022-04-15 11:56:24 Incoming Data Channel: Using 512 bit message hash 'SHA512' for HMAC authentication
+2022-04-15 11:56:24 net_route_v4_best_gw query: dst 0.0.0.0
+2022-04-15 11:56:24 net_route_v4_best_gw result: via 192.168.1.1 dev eth0
+2022-04-15 11:56:24 ROUTE_GATEWAY 192.168.1.1/255.255.255.0 IFACE=eth0 HWADDR=00:50:56:21:88:bb
+2022-04-15 11:56:24 TUN/TAP device tun0 opened
+2022-04-15 11:56:24 net_iface_mtu_set: mtu 1500 for tun0
+2022-04-15 11:56:24 net_iface_up: set tun0 up
+2022-04-15 11:56:24 net_addr_v4_add: 10.8.73.220/16 dev tun0
+2022-04-15 11:56:24 net_route_v4_add: 10.10.0.0/16 via 10.8.0.1 dev [NULL] table 0 metric 1000
+2022-04-15 11:56:24 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+2022-04-15 11:56:24 Initialization Sequence Completed
+
+====================================================================================================================
